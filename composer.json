@@ -3,14 +3,21 @@
     "description": "Yii parse.org Handler",
     "type": "library",
     "license": "MIT",
+    "keywords": ["yii2","extension","Inquid","Parse","parseplatform.org","facebook"],
     "authors": [
         {
             "name": "inquid",
             "email": "contact@inquid.co"
         }
     ],
+    "autoload": {
+      "psr-4": {
+          "inquid\\yiiparse\\": "src"
+      }
+    },
     "minimum-stability": "dev",
     "require": {
+      "yiisoft/yii2": ">=2.0.5",
       "parse/php-sdk" : "1.4.*"
     }
 }
