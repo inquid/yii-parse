@@ -1,0 +1,16 @@
+{
+    "name": "inquid/yii-parse",
+    "description": "Yii parse.org Handler",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "inquid",
+            "email": "contact@inquid.co"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "parse/php-sdk" : "1.4.*"
+    }
+}
