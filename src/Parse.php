@@ -5,7 +5,7 @@ namespace inquid\parse;
 use Parse\ParseClient;
 use yii\base\Component;
 
-class TermicTicket extends Component
+class Parse extends Component
 {
     public $app_id;
     public $rest_key;
