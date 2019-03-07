@@ -1,6 +1,6 @@
 <?php
 
-namespace inquid\parse;
+namespace inquid\yiiparse;
 
 use Parse\ParseClient;
 use yii\base\Component;
