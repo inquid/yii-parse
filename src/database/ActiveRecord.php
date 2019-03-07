@@ -6,7 +6,7 @@
  * Time: 01:01
  */
 
-namespace inquid\parse\database;
+namespace inquid\yiiparse\database;
 
 use Yii;
 use yii\base\InvalidCallException;
