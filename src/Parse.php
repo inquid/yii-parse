@@ -3,28 +3,30 @@
 namespace inquid\yiiparse;
 
 use Parse\ParseClient;
+use Parse\ParseException;
+use Parse\ParseObject;
+use Parse\ParseQuery;
+use Parse\ParseUser;
 use yii\base\Component;
 
 class Parse extends Component
 {
     public $app_id;
-    public $rest_key;
+    public $rest_key = null;
     public $master_key;
     public $server_url;
-    public $port = 1337;
+    public $port;
 
-    public function init()
+    function init()
     {
-        parent::init();
         ParseClient::initialize($this->app_id, $this->rest_key, $this->master_key);
-        ParseClient::setServerURL("{$this->server_url}:{$this->port}", 'parse');
-
+        ParseClient::setServerURL("{$this->server_url}", 'parse');
     }
 
     public function healthCheck()
     {
         $health = ParseClient::getServerHealth();
-        return $health['status'] === 200 ? true : false;
+        return $health['status'] == 200 ? true : false;
     }
 
     /** set curl http client (default if none set) */
